@@ -15,6 +15,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author redA
+ */
 @WebServlet("/select")
 public class SelectServer extends HttpServlet {
     @Override
@@ -33,6 +36,6 @@ public class SelectServer extends HttpServlet {
         }
         HttpSession session = req.getSession();
         session.setAttribute("selectRes",res);
-        resp.setHeader("refresh","1");
+        resp.setHeader("refresh","1");;
     }
 }

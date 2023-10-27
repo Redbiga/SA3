@@ -12,6 +12,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * @author redA
+ */
 @WebServlet("/delete")
 public class DeleteServer extends HttpServlet {
     @Override
@@ -21,7 +24,7 @@ public class DeleteServer extends HttpServlet {
         ContactsDao contactsMapper = sqlsession.getMapper(ContactsDao.class);
 
         contactsMapper.contactsDelete(Integer.parseInt(ccode));
-        //手动提交事务
+        //手动提交事务;
         sqlsession.commit();
     }
 }

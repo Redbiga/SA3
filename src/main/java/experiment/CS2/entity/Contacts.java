@@ -1,5 +1,8 @@
 package experiment.CS2.entity;
 
+/**
+ * @author redA
+ */
 public class Contacts {
     private Integer ccode;
     private String cname;

@@ -241,7 +241,7 @@ public class Client {
                 contacts.setCaddress(userText2.getText());
                 contacts.setCphone(userText3.getText());
                 contactsMapper.contactsUpdate(contacts);
-                //手动提交事务
+                //手动提交事务;
                 session.commit();
             }
         });

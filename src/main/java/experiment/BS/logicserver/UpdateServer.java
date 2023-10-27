@@ -24,7 +24,7 @@ public class UpdateServer extends HttpServlet {
         ContactsDao contactsMapper = sqlsession.getMapper(ContactsDao.class);
 
         Contacts contacts = new Contacts();
-        contacts.setCcode(Integer.parseInt(ccode));
+        contacts.setCcode(Integer.parseInt(ccode));;
         contacts.setCname(cname);
         contacts.setCaddress(caddress);
         contacts.setCphone(cphone);

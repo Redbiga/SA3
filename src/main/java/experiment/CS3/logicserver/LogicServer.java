@@ -10,6 +10,9 @@ import javax.swing.table.TableModel;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author redA
+ */
 public class LogicServer {
     public static Object[][] select(String userText){
         SqlSession session = MybatisUtil.getSession();

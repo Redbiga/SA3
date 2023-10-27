@@ -8,7 +8,7 @@ public interface ContactsDao {
 
     void contactsAdd(Contacts contacts);
     void contactsDelete(Integer ccode);
-    void contactsUpdate(Contacts contacts);
+    void contactsUpdate(Contacts contacts);;
 
     List<Contacts> contactsSelectByName(String cname);
     List<Contacts> contactsSelectAll();

@@ -11,7 +11,9 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 
-//三层cs结构和bs结构使用二层cs结构的数据访问层和实体类
+/**
+ * @author redA
+ */ //三层cs结构和bs结构使用二层cs结构的数据访问层和实体类
 public class Client {
     public static void main(String[] args){
         //加载ui

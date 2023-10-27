@@ -12,6 +12,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * @author redA
+ */
 @WebServlet("/add")
 public class AddServer extends HttpServlet {
     @Override
@@ -29,7 +32,7 @@ public class AddServer extends HttpServlet {
         contacts.setCphone(cphone);
 
         contactsMapper.contactsAdd(contacts);
-        //手动提交事务
+        //手动提交事务;
         sqlsession.commit();
     }
 }
