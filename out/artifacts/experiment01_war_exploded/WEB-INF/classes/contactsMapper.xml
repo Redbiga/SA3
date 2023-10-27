@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="experiment.CS2.dataserver.ContactsDao">
+    <insert id="contactsAdd" parameterType="experiment.CS2.entity.Contacts">
+        insert into contacts_list (ccode,cname,caddress,cphone)
+        value(#{ccode},#{cname},#{caddress},#{cphone})
+    </insert>
+
+    <delete id="contactsDelete" parameterType="java.lang.Integer">
+        delete from contacts_list where ccode=#{ccode}
+    </delete>
+
+    <update id="contactsUpdate" parameterType="experiment.CS2.entity.Contacts">
+        update contacts_list set cname=#{cname},caddress=#{caddress},cphone=#{cphone} where ccode=#{ccode}
+    </update>
+
+    <select id="contactsSelectByName" parameterType="java.lang.String" resultType="experiment.CS2.entity.Contacts">
+        select * from contacts_list where cname like #{cname}
+    </select>
+
+    <select id="contactsSelectAll" resultType="experiment.CS2.entity.Contacts">
+        select * from contacts_list
+    </select>
+</mapper>
